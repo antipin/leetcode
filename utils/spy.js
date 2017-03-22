@@ -18,7 +18,10 @@ function spy(func) {
         if (spy.cases.current === spy.cases.total) {
 
             console.log(
-                JSON.stringify(spy.cases.dump, null, 4)
+                JSON.stringify({
+                    functionName: func.name,
+                    testCases: spy.cases.dump
+                }, null, 4)
             )
 
             return null
