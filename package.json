@@ -1,0 +1,19 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "leetcode problems solved by me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antipin/leetcode.git"
+  },
+  "author": "Alexander I. Antipin <alex@antipin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antipin/leetcode/issues"
+  },
+  "homepage": "https://github.com/antipin/leetcode#readme"
+}
