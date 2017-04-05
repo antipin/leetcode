@@ -64,3 +64,5 @@ const getHint = (function() {
     return getHint
 
 })()
+
+module.exports = getHint
