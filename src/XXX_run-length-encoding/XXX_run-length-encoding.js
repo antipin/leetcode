@@ -27,11 +27,11 @@ function splice(arr, left, right) {
     // Replace part of array with correspondent encoding number
     // This step makes the following transformation:
     //
-    // Before: AAAAAABBBBBBBBBBCCCCC
+    // Before: AAAAAABBBBBBBBBBC42D9
     //               ^        ^
     //               left     right
     //
-    // After:  AAAAAAB10BBBBBBBCCCCC
+    // After:  AAAAAAB10BBBBBBBC42D9
     //               ^        ^
     //               left     right
     for (let i = 1; i <= elemsToReplace; ++i) {
@@ -43,11 +43,11 @@ function splice(arr, left, right) {
     // Shift right part of the array
     // This step makes the following transformation:
     //
-    // Before: AAAAAAB10BBBBBBBCCCCC
+    // Before: AAAAAAB10BBBBBBBC42D9
     //               ^        ^
     //               left     right
     //
-    // After:  AAAAAAB10CCCCCBBCCCCC
+    // After:  AAAAAAB10C42D9BBC42D9
     //               ^        ^
     //               left     right
     for (let oldPos = right + 1, newPos = left + elemsToReplace + 1; oldPos < arr.length; ++oldPos, ++newPos) {
@@ -59,11 +59,11 @@ function splice(arr, left, right) {
     // Cut off unnecessary right elements
     // This step makes the following transformation:
     //
-    // Before: AAAAAAB10BBBBBBBCCCCC
+    // Before: AAAAAAB10C42D9BBC42
     //               ^        ^
     //               left     right
     //
-    // After:  AAAAAAB10CCCCC
+    // After:  AAAAAAB10C42D9
     //               ^        ^
     //               left     right
     arr.length = arr.length - elemsToShift + 1
@@ -92,7 +92,7 @@ module.exports = function runLengthEncoding(input) {
         if (left === 0 || list[left] !== list[left - 1]) {
 
             splice(list, left, right)
-            
+
             // Update right pointer after splice
             right = left - 1
 
