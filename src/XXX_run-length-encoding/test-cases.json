@@ -1,0 +1,44 @@
+[
+    {
+        "input": [
+            ""
+        ],
+        "output": ""
+    },
+    {
+        "input": [
+            "A"
+        ],
+        "output": "A"
+    },
+    {
+        "input": [
+            "AA"
+        ],
+        "output": "A2"
+    },
+    {
+        "input": [
+            "ABC"
+        ],
+        "output": "ABC"
+    },
+    {
+        "input": [
+            "ABBCCCZ"
+        ],
+        "output": "AB2C3Z"
+    },
+    {
+        "input": [
+            "AAABCC"
+        ],
+        "output": "A3BC2"
+    },
+    {
+        "input": [
+            "AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        ],
+        "output": "A4B3C2XYZD4E3F3A6B28"
+    }
+]
