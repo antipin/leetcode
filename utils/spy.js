@@ -1,4 +1,11 @@
 /**
+ * Update this number according to correspondent value
+ * (you should know number of test cases in order to fetch all of them)
+ * @type {number}
+ */
+const TOTAL_NUMBER_OF_TEST_CASES = 151
+
+/**
  * It spies for test cases that were passed to problem solutios and allows to dump it
  * @param {Function} func
  * @returns {Function}
@@ -18,10 +25,7 @@ function spy(func) {
         if (spy.cases.current === spy.cases.total) {
 
             console.log(
-                JSON.stringify({
-                    functionName: func.name,
-                    testCases: spy.cases.dump
-                }, null, 4)
+                JSON.stringify(spy.cases.dump, null, 4)
             )
 
             return null
@@ -34,7 +38,7 @@ function spy(func) {
 }
 
 spy.cases = {
-    total: 151,
+    total: TOTAL_NUMBER_OF_TEST_CASES,
     current: 0,
     dump: []
 }
