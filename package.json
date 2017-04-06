@@ -1,10 +1,10 @@
 {
   "name": "leetcode-solutions",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "leetcode problems solved by me",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --harmony-async-await ./scripts/test/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/antipin/leetcode/issues"
   },
-  "homepage": "https://github.com/antipin/leetcode#readme"
+  "homepage": "https://github.com/antipin/leetcode#readme",
+  "dependencies": {
+    "commander": "2.9.0",
+    "lodash": "4.17.4"
+  }
 }
